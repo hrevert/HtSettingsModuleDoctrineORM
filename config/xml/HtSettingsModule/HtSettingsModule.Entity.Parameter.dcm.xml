@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <mapped-superclass name="HtSettingsModule\Entity\Parameter" table="settings">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+        <field name="name" length="64" type="string" nullable="false"></field>
+        <field name="namespace" length="24" type="string" nullable="false"></field>
+        <field name="value" length="256" type="string" nullable="false"></field>
+    </mapped-superclass>
+
+</doctrine-mapping>
