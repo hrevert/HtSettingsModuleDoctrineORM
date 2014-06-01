@@ -5,6 +5,7 @@ use HtSettingsModule\Mapper\SettingsMapper as BaseSettingsMapper;
 use Doctrine\ORM\EntityManager;
 use HtSettingsModule\Options\DbOptionsInterface;
 use HtSettingsModule\Entity\ParameterInterface;
+use HtSettingsModule\Exception;
 
 class SettingsMapper extends BaseSettingsMapper
 {
@@ -111,8 +112,8 @@ class SettingsMapper extends BaseSettingsMapper
         }
         $qb = $this->em->createQueryBuilder('s');
         $qb->select()->where('s.namespace = :namespace AND s.name = :name')
-            ->setParameter('namespace', $parameter->getNamespace())
-            ->setParameter('name', $parameter->getName());
+            ->setParameter('namespace', $namespace)
+            ->setParameter('name', $name);
 
         return $qb->getQuery()->getSingleOrNullResult();                
     }

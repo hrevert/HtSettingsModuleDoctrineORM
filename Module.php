@@ -1,5 +1,5 @@
 <?php
-namespace Application;
+namespace HtSettingsModuleDoctrineORM;
 
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
@@ -37,6 +37,13 @@ class Module implements
      */
     public function getServiceConfig()
     {
-        return [];
+        return array(
+            'factories' => array(
+                'HtSettingsModule_SettingsMapper' => 'HtSettingsModuleDoctrineORM\Factory\SettingsMapperFactory',
+            ),
+            'aliases' => array(
+                'HtSettingsModuleDoctrineORM\Doctrine\Em' => 'Doctrine\ORM\EntityManager',
+            ),
+        );
     }
 }
