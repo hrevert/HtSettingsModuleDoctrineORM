@@ -1,0 +1,32 @@
+{
+    "name": "hrevert/ht-settings-module-doctrine-orm",
+    "description": "Doctrine ORM storage adapter for HtSettingsModule",
+    "type": "library",
+    "keywords": [
+        "zf2",
+        "module",
+        "zendframework",
+        "settings",
+        "hrevert"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/hrevert/HtSettingsModuleDoctrineORM",
+    "authors": [
+        {
+            "name": "Hrevert Technologies",
+            "email": "info@hrevert.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "hrevert/ht-settings-module": "0.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HtSettingsModuleDoctrineORM\\": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}

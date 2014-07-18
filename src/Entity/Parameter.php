@@ -1,5 +1,5 @@
 <?php
 namespace HtSettingsModuleDoctrineORM\Entity; 
 
-class Parameter extends HtSettingsModule\Entity\Parameter
+class Parameter extends HtSettingsModule\Entity\IdAwareParameter
 {}
