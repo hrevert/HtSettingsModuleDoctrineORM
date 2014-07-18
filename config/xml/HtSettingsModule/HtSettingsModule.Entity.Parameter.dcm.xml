@@ -7,7 +7,7 @@
     <mapped-superclass name="HtSettingsModule\Entity\Parameter" table="settings">
         <field name="name" length="64" type="string" nullable="false"></field>
         <field name="namespace" length="24" type="string" nullable="false"></field>
-        <field name="value" length="256" type="string" nullable="false"></field>
+        <field name="value" length="256" type="string" nullable="true"></field>
     </mapped-superclass>
 
 </doctrine-mapping>
